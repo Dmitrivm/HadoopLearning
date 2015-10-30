@@ -62,7 +62,7 @@ public class ApplicationMaster {
         while (allocatedContainers < files.size()) {
             AllocateResponse response = rmClient.allocate(0);
             for (Container container : response.getAllocatedContainers()) {
-                
+
                     //Command to execute to download url to HDFS
                     ////command = "hadoop jar YARNTest1.jar G3.DownloadFileService" + " "
                     command = "java G3.DownloadFileService" + " "
